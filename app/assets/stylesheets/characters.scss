@@ -1,0 +1,16 @@
+// Place all the styles related to the Characters controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+table.characters__table {
+  border: 1px solid black;
+  width: 100%;
+  th {
+    border: 1px solid black;
+    text-align: center;
+  }
+  td {
+    border: 1px solid black;
+    text-align: center;
+  }
+}

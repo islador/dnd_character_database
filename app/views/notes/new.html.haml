@@ -1,0 +1,5 @@
+= form_tag character_notes_path do
+  = field_set_tag do
+    = label_tag :content, 'Note:'
+    = text_field_tag :content
+    = submit_tag 'Create Note'

@@ -1,0 +1,17 @@
+= form_tag '/characters' do
+  = field_set_tag do
+    = label_tag :name, 'Name:'
+    = text_field_tag :name
+    = label_tag :location, "Location"
+    = text_field_tag :location
+    = label_tag :alignment, "Alignment"
+    = text_field_tag :alignment
+    = label_tag :role, "Role"
+    = text_field_tag :role
+    = label_tag :occupation, "Occupation"
+    = text_field_tag :occupation
+    = label_tag :allegiance, "Allegiance"
+    = text_field_tag :allegiance
+    = label_tag :goals, "Goals"
+    = text_field_tag :goals
+    = submit_tag 'Save Changes'

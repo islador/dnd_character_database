@@ -1,0 +1,27 @@
+%table.characters__table
+  %thead.characters__table-header
+    %tr.characters__table-header-row
+      %th Name
+      %th Location
+      %th Alignment
+      %th Role
+      %th Occupation
+      %th Allegiance
+      %th Goals
+  %tbody
+    -@characters.each do |character|
+      %tr.characters__row{data: {character_id: character.id}}
+        %td
+          = character.name
+        %td
+          = character.location
+        %td
+          = character.alignment
+        %td
+          = character.role
+        %td
+          = character.occupation
+        %td
+          = character.allegiance
+        %td
+          = character.goals

@@ -1,0 +1,46 @@
+%div.character
+  %div.character__name
+    Name:
+    = @character.name
+  %div.character__location
+    Location:
+    = @character.location
+  %div.character__alignment
+    Alignment:
+    = @character.alignment
+  %div.character__role
+    Role:
+    = @character.role
+  %div.character__occupation
+    Occupation:
+    = @character.occupation
+  %div.character__allegiance
+    Allegiance:
+    = @character.allegiance
+  %div.character__goals
+    Goals:
+    = @character.goals
+  %div.character__notes
+    = link_to "Add Note", new_character_note_path(@character)
+    %table.character__notes__table
+      %thead.character__notes__table-header
+        %tr.character__notes__table-header-row
+          %th Note
+          %th Created On
+          %th Last Updated
+          %th
+          %th
+      %tbody.character__notes__table-body
+        -@character.notes.each do |note|
+          %tr.character__notes__table-row
+            %td
+              = note.content
+            %td
+              = note.created_at .to_date
+            %td
+              = note.updated_at.to_date
+            %td
+              = link_to "Edit Note", edit_character_note_path(@character, note)
+            %td
+              = link_to "Delete", character_note_path(@character, note), method: 'delete'
+
