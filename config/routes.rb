@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root 'characters#index'
+  root 'characters#new'
 
   resources :characters do
     resources :notes
