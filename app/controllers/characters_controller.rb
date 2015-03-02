@@ -3,8 +3,9 @@ class CharactersController < ApplicationController
   end
 
   def create
+    puts permitted_params
     character = Character.create(permitted_params)
-    redirect_to character_path(character)
+    render json: character
   end
 
   def show
@@ -23,6 +24,6 @@ class CharactersController < ApplicationController
 
   private
     def permitted_params
-      params.permit(:name, :location, :alignment, :role, :occupation, :allegiance, :goals)
+      params.require(:character).permit(:name, :location, :alignment, :role, :occupation, :allegiance, :goals)
     end
 end

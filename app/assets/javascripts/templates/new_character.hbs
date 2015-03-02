@@ -2,25 +2,25 @@
   {{view.weird}}
   {{character.name}}
   <div>
-    {{input value=character.name class="new-character__form-group--required" placeholder="Name"}}
+    {{input value=character.name class="new-character__form-group new-character__form-group--required" placeholder="Name"}}*
   </div>
   <div>
-    {{input class="new-character__form-group--required" placeholder="Location"}}
+    {{input value=character.location class="new-character__form-group new-character__form-group--required" placeholder="Location"}}*
   </div>
   <div>
-    {{input class="new-character__form-group" placeholder="Alignment"}}
+    {{input value=character.alignment class="new-character__form-group" placeholder="Alignment"}}
   </div>
   <div >
-    {{input class="new-character__form-group" placeholder="Role"}}
+    {{input value=character.role class="new-character__form-group" placeholder="Role"}}
   </div>
   <div>
-    {{input class="new-character__form-group--required" placeholder="Occupation"}}
+    {{input value=character.occupation class="new-character__form-group new-character__form-group--required" placeholder="Occupation"}}*
   </div>
   <div>
-    {{input class="new-character__form-group" placeholder="Allegiance"}}
+    {{input value=character.allegiance class="new-character__form-group" placeholder="Allegiance"}}
   </div>
   <div>
-    {{input class="new-character__form-group" placeholder="Goals"}}
+    {{input value=character.goals class="new-character__form-group" placeholder="Goals"}}
   </div>
-  <button {{action "createCharacter" content}} class="btn btn-primary btn-block" type="submit">Add Character</button>
+  <button {{action "createCharacter" character}} class="btn btn-primary btn-block" type="submit">Add Character</button>
 </form>

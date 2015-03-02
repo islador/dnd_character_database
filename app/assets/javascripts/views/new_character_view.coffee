@@ -1,3 +1,2 @@
 Dnd.NewCharacterView = Ember.View.extend
-  weird: "Not Rex",
-  character: "Craptastic"
+  weird: "Not Rex"
