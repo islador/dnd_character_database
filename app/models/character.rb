@@ -16,4 +16,8 @@
 
 class Character < ActiveRecord::Base
   has_many :notes, as: :notable
+
+  validates :name, presence: true
+  validates :location, presence: true
+  validates :occupation, presence: true
 end
