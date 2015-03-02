@@ -1,6 +1,8 @@
 <form>
+  {{view.weird}}
+  {{character.name}}
   <div>
-    {{input class="new-character__form-group--required" placeholder="Name"}}
+    {{input value=character.name class="new-character__form-group--required" placeholder="Name"}}
   </div>
   <div>
     {{input class="new-character__form-group--required" placeholder="Location"}}
@@ -20,5 +22,5 @@
   <div>
     {{input class="new-character__form-group" placeholder="Goals"}}
   </div>
-  <button {{action "createCharacter" character}} class="btn btn-primary btn-block" type="submit">Add Character</button>
+  <button {{action "createCharacter" content}} class="btn btn-primary btn-block" type="submit">Add Character</button>
 </form>
