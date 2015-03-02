@@ -1,0 +1,24 @@
+<form>
+  <div>
+    {{input class="new-character__form-group--required" placeholder="Name"}}
+  </div>
+  <div>
+    {{input class="new-character__form-group--required" placeholder="Location"}}
+  </div>
+  <div>
+    {{input class="new-character__form-group" placeholder="Alignment"}}
+  </div>
+  <div >
+    {{input class="new-character__form-group" placeholder="Role"}}
+  </div>
+  <div>
+    {{input class="new-character__form-group--required" placeholder="Occupation"}}
+  </div>
+  <div>
+    {{input class="new-character__form-group" placeholder="Allegiance"}}
+  </div>
+  <div>
+    {{input class="new-character__form-group" placeholder="Goals"}}
+  </div>
+  <button {{action "createCharacter" character}} class="btn btn-primary btn-block" type="submit">Add Character</button>
+</form>

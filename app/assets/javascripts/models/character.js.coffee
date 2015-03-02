@@ -1,10 +1,11 @@
-Dnd.Character = Ember.Object.extend({})
-#Dnd.Character = DS.Model.extend
-Dnd.Character.reopenClass
-  findAll: ->
-    characters = Em.A()
-    $.getJSON('/characters').then (data) ->
-      console.log("Data: ", data)
-      Ember.run () ->
-        characters.pushObjects(data.characters)
-        characters
+Dnd.Character = DS.Model.extend
+  name: DS.attr('string')
+  location: DS.attr('string')
+  alignment: DS.attr('string')
+  role: DS.attr('string')
+  occupation: DS.attr('string')
+  allegiance: DS.attr('string')
+  goals: DS.attr('string')
+  updated_at: DS.attr("date")
+  created_at: DS.attr("date")
+

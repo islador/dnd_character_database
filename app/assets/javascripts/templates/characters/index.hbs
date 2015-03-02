@@ -1,0 +1,24 @@
+<h1> Character Table </h1>
+{{#link-to 'new_character'}}Add New Character{{/link-to}}
+<table class="characters__table">
+  <thead>
+    <th>Name</th>
+    <th>Location</th>
+    <th>Alignment</th>
+    <th>Role</th>
+    <th>Occupation</th>
+    <th>Allegiance</th>
+    <th>Goals</th>
+  </thead>
+  {{#each character in characters}}
+      <tr>
+        <td>{{#link-to 'character' character}}{{character.name}}{{/link-to}}</td>
+        <td>{{character.location}}</td>
+        <td>{{character.alignment}}</td>
+        <td>{{character.role}}</td>
+        <td>{{character.occupation}}</td>
+        <td>{{character.allegiance}}</td>
+        <td>{{character.goals}}</td>
+      </tr>
+  {{/each}}
+</table>
